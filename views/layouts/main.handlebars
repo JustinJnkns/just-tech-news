@@ -8,21 +8,20 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<header>
-  <hi>
-    <a href ="/">Just Tech News</a>
-  </hi>
-  <nav>
-    <a href="/login">login</a>
-  </nav>
-</header>
-
 <body>
   <div class="wrapper">
     <header>
       <h1>
         <a href="/">Just Tech News</a>
       </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
     </header>
     <main>
       {{{ body }}}
@@ -31,7 +30,10 @@
       Thanks for visiting!
     </footer>
   </div>
-
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

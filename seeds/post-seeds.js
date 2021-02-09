@@ -2,8 +2,8 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'How to CSS',
-    post_url: 'https://html.com/css/#What_is_CSS',
+    title: 'Donec posuere metus vitae ipsum.',
+    post_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
     user_id: 10
   },
   {
